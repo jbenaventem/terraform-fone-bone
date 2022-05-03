@@ -9,7 +9,7 @@ on:
   push:
     branches: [ feature/*, main ]
   pull_request:
-    branches: [ feat ]  
+    branches: [ main ]  
   schedule:
     - cron: '26 0 * * 0'
 
