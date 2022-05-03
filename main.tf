@@ -3,7 +3,7 @@ terraform {
     organization = "test-cto"
 
     workspaces {
-      name = "terraform-fone-bone"
+      name = "terraform-fone-bone-dev"
     }
   }
 }
