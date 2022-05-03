@@ -23,7 +23,7 @@ jobs:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
       - name: Run terraform fmt check
         run: |
-          terraform init -backend-config=${{env.APP_AUTO_TFVARS}} -migrate-state
+          terraform init
           terraform fmt -check -diff
           terraform validate
 
