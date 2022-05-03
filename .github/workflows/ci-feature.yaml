@@ -23,6 +23,7 @@ jobs:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
       - name: Run terraform fmt check
         run: |
+          terraform login ${{ secrets.TF_TOKEN }}
           terraform init
           terraform fmt -check -diff
           terraform validate
