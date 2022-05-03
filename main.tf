@@ -6,5 +6,5 @@ resource "random_pet" "generate_id" {
 
 resource "local_file" "comic" {
   filename = "./mis-comic.txt"
-  source = "./content-list.md"
+  source   = "./content-list.md"
 }
