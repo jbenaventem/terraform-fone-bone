@@ -1,3 +1,12 @@
+terraform {
+  cloud {
+    organization = "test-cto"
+
+    workspaces {
+      name = "terraform-fone-bone.dev"
+    }
+  }
+}
 resource "random_pet" "generate_id" {
   length    = 1
   prefix    = "Fone Bone"
