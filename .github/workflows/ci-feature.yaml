@@ -20,10 +20,9 @@ jobs:
         uses: hashicorp/setup-terraform@625cb76050397c6b3a1789261eb129f8f39a206b
         with:
           terraform_version: ${{ inputs.version }}
-          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+          cli_config_credentials_token: ${{ secrets.TF_TOKEN }}
       - name: Run terraform fmt check
         run: |
-          terraform login ${{ secrets.TF_TOKEN }}
           terraform init
           terraform fmt -check -diff
           terraform validate
@@ -41,7 +40,7 @@ jobs:
         uses: hashicorp/setup-terraform@625cb76050397c6b3a1789261eb129f8f39a206b
         with:
           terraform_version: ${{ inputs.version }}
-          #cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+          cli_config_credentials_token: ${{ secrets.TF_TOKEN }}
       
       - name: Terraform Init
         id: init
