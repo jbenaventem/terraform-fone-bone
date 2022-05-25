@@ -16,4 +16,5 @@ resource "random_pet" "generate_id" {
 resource "local_file" "comic" {
   filename = "./mis-comic.txt"
   content = "${var.content}  --  ${var.password}" 
+  //content = "Test"
 }
