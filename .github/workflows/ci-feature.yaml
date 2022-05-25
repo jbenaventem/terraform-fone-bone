@@ -9,8 +9,6 @@ jobs:
   fmt-validate:
     name: Format And validate
     runs-on: ubuntu-latest
-    env:
-      APP_AUTO_TFVARS: config.dev.tfvars
  
     steps:
       - name: Check out code
