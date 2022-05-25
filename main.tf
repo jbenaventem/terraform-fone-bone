@@ -1,7 +1,6 @@
 terraform {
   cloud {
     organization = "test-cto"
-
     workspaces {
       name = "terraform-fone-bone-dev"
     }
@@ -16,5 +15,5 @@ resource "random_pet" "generate_id" {
 
 resource "local_file" "comic" {
   filename = "./mis-comic.txt"
-  content = "${var.content}  --  ${var.password}" 
+  content = "${var.content} - ${var.password}"
 }
